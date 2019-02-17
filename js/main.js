@@ -440,7 +440,7 @@ function checkDownLeftDiagonal(a, b){
 }
 
 function checkDraw(i){
-	if(i == 42){
+	if(i == 42 && result !== true){
 		gameDraw = true;
 		message.textContent = "Match Draw!";
 		message.style.fontSize = "15px";

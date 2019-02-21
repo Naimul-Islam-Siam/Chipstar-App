@@ -39,9 +39,19 @@ btn1.addEventListener("click",function(){
 		btn1.classList.add("selected-green");
 		btn2.classList.remove("selected-red");
 		message.textContent = "Start Game!";
-		message.style.fontSize = "15px";
 	}
-	else{
+
+	if(gameDraw === true){
+		message.textContent = "Match Draw!";
+		wrongSound.play();
+	}
+
+	if(result === true){
+		wrongSound.play();
+	}
+
+	if(count > 0 && result === false && gameDraw === false){
+		message.textContent = "Match is going on!";
 		wrongSound.play();
 	}
 });
@@ -52,9 +62,19 @@ btn2.addEventListener("click",function(){
 		btn2.classList.add("selected-red");
 		btn1.classList.remove("selected-green");
 		message.textContent = "Start Game!";
-		message.style.fontSize = "15px";
 	}
-	else{
+
+	if(gameDraw === true){
+		message.textContent = "Match Draw!";
+		wrongSound.play();
+	}
+
+	if(result === true){
+		wrongSound.play();
+	}
+
+	if(count > 0 && result === false && gameDraw === false){
+		message.textContent = "Match is going on!";
 		wrongSound.play();
 	}
 });
@@ -229,6 +249,13 @@ for(let i = 0; i < box.length; i++){
 				checkDraw(count);
 				switchColor();
 			}
+		}
+		else if(result === true){
+			message.textContent = color.toUpperCase() + " already won!";
+			wrongSound.play();
+		}
+		else if(gameDraw === true){
+			wrongSound.play();
 		}
 	});
 }

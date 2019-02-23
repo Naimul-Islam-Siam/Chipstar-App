@@ -8,6 +8,7 @@
 <!-- versionCode is optional and Android only -->
 
   <name>Chipstar</name>
+  <icon src="img/icon.png" />
   <description>
       Mobile App of Chipstar Game.
   </description>

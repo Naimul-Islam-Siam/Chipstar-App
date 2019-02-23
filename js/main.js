@@ -402,6 +402,10 @@ function checkLeftSide(a, b){
 			getColor(a,b) === getColor(a,b-3)
 			){
 
+			markWinner(a,b);
+			markWinner(a,b-1);
+			markWinner(a,b-2);
+			markWinner(a,b-3);
 			result = true;
 			winner = color;
 			message.textContent = "Congrats "+ winner.toUpperCase() + " you won!";
@@ -420,6 +424,10 @@ function checkDownSide(a, b){
 			getColor(a,b) === getColor(a+3,b)
 			){
 
+			markWinner(a,b);
+			markWinner(a+1,b);
+			markWinner(a+2,b);
+			markWinner(a+3,b);
 			result = true;
 			winner = color;
 			message.textContent = "Congrats "+ winner.toUpperCase() + " you won!";
@@ -437,6 +445,11 @@ function checkDownRightDiagonal(a, b){
 			getColor(a,b) === getColor(a+2,b+2) &&
 			getColor(a,b) === getColor(a+3,b+3)
 			){
+
+			markWinner(a,b);
+			markWinner(a+1,b+1);
+			markWinner(a+2,b+2);
+			markWinner(a+3,b+3);
 
 			result = true;
 			winner = color;
@@ -456,6 +469,11 @@ function checkDownLeftDiagonal(a, b){
 			getColor(a,b) === getColor(a+3,b-3)
 			){
 
+			markWinner(a,b);
+			markWinner(a+1,b-1);
+			markWinner(a+2,b-2);
+			markWinner(a+3,b-3);
+		
 			result = true;
 			winner = color;
 			message.textContent = "Congrats "+ winner.toUpperCase() + " you won!";
@@ -508,9 +526,21 @@ function checkValid(x){
 	}
 }
 
+function markWinner(a, b){
+	for(var i = 0; i < 6; i++){
+		for(var j = 0; j < 7; j++){
+			if(i === a && j === b){
+				mark = document.querySelector("#b"+a+"-"+b);
+				mark.classList.add("marker");
+			}
+		}
+	}
+}
+
 function reset(){
 	for(var i = 0; i < box.length; i++){
 		box[i].style.backgroundColor = '';
+		box[i].classList.remove("marker");
 	}
 	message.textContent = "Start Again! [GREEN by default]";
 	message.style.fontSize = "15px";

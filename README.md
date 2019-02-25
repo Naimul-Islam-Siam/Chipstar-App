@@ -11,9 +11,9 @@ Screenshots from App :
 ![](img/Screenshot2.png)
 ![](img/Screenshot3.png)
 
-Download The Android App : https://drive.google.com/open?id=1Ft6-_jn2jmpDroeTc_v8eBEDXyjjq-Cm
+Download The Android App : https://bit.ly/2C2clOf
 
-Download The Windows App : https://drive.google.com/open?id=1iIOpbmGHntj9sFrFqZwGGbcF-Qqc19NT
+Download The Windows App : https://bit.ly/2SWIdxW
 
 Play The Web Version : https://naimul-islam-siam.github.io/Chipstar/
 
